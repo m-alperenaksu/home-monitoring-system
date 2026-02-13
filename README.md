@@ -1,29 +1,24 @@
 # Home Monitoring System
 
-Arduino Uno ile sıcaklık ve nem takibi yapan basit bir ev izleme sistemi.
+A simple home monitoring system built with Arduino Uno. Tracks temperature and humidity using a DHT11 sensor and shows the values on an LCD screen.
 
-## Kullanılan Bileşenler
+## Components
 
 - Arduino Uno
-- DHT11 Sıcaklık & Nem Sensörü
-- 16x2 LCD Ekran
+- DHT11 Temperature & Humidity Sensor
+- 16x2 LCD Display
 - Buzzer
 
-## Bağlantılar
+## Wiring
 
-| Bileşen | Pin |
-|--------|-----|
+| Component | Pin |
+|-----------|-----|
 | DHT11 | D2 |
 | Buzzer | D13 |
 | LCD RS | D7 |
 | LCD EN | D8 |
 | LCD D4-D7 | D9-D12 |
 
-## Nasıl Çalışır
+## How It Works
 
-Sistem her 2 saniyede bir DHT11 sensöründen sıcaklık ve nem değerlerini okur, LCD ekranda gösterir. Sıcaklık 30°C veya nem %70 üzerine çıktığında buzzer alarm verir.
-
-## Kütüphaneler
-
-- `DHT sensor library` — Adafruit
-- `LiquidCrystal` — Arduino yerleşik
+Reads temperature and humidity from the DHT11 every 2 seconds and displays them on the LCD. If temperature goes above 30°C or humidity goes above 70%, the buzzer triggers an alarm.
